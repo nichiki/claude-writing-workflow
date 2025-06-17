@@ -2,12 +2,17 @@
 .DS_Store
 
 # 執筆した記事（個人的なコンテンツ）
-articles/
+# ただし、サンプルの記事は含める
+articles/*
+!articles/2025-06-17_tomato-yogurt-curry/
 
 # エディタ
 .vscode/
 .idea/
+.cursorindexingignore
 
 # その他
 *.log
 *.tmp
+
+.specstory/

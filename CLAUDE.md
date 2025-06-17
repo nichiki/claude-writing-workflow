@@ -34,17 +34,22 @@
 ## プロジェクト構造
 
 ```
-workflow-builder/
+claude-writing-workflow/
 ├── .claude/
-│   └── commands/      # 各種コマンド定義
-├── writing-configs/   # 文章執筆用の設定ファイル
-├── articles/          # 執筆した文章の保存先
+│   └── commands/         # 各種コマンド定義
+│       └── write.md      # 文章執筆コマンド
+├── writing-configs/      # 文章執筆用の設定ファイル
+│   └── default.yaml      # デフォルト設定
+├── articles/             # 執筆した文章の保存先（.gitignore対象）
 │   └── YYYY-MM-DD_{slug}/
-│       ├── draft.md   # 執筆中のドラフト
-│       ├── article.md # 完成版
-│       └── assets/    # 関連リソース
-├── CLAUDE.md         # このファイル
-└── その他のファイル
+│       ├── draft.md      # 執筆中のドラフト
+│       ├── article.md    # 完成版
+│       └── assets/       # 関連リソース
+│           └── research.md # リサーチ結果
+├── CLAUDE.md            # このファイル
+├── README.md            # プロジェクトドキュメント
+├── LICENSE              # MITライセンス
+└── .gitignore           # Git除外設定
 ```
 
 ## 基本的な動作原則

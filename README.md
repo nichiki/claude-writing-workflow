@@ -50,7 +50,7 @@ Claude Codeを使用した対話型文章執筆ワークフローシステムで
 
 1. リポジトリをクローン
 ```bash
-git clone https://github.com/[your-username]/claude-writing-workflow.git
+git clone https://github.com/nichiki/claude-writing-workflow.git
 cd claude-writing-workflow
 ```
 
@@ -65,7 +65,7 @@ claude code .
 
 1. Claude Codeで以下のコマンドを実行：
 ```
-/write
+/project:write
 ```
 
 2. 対話的に要件を入力：
@@ -99,7 +99,7 @@ You: 1
 
 ### 実行例
 
-完全な実行例は[examples](./examples)ディレクトリを参照してください。
+実際の執筆例は[articles/2025-06-17_tomato-yogurt-curry](./articles/2025-06-17_tomato-yogurt-curry)ディレクトリを参照してください。リサーチ結果から最終的な記事まで、実際のワークフローの成果物を確認できます。
 
 ## 📁 プロジェクト構造
 
@@ -159,25 +159,36 @@ quality_checks:
   - "読者の課題を解決できるか"
 ```
 
-## 🔮 今後の展望
+## 🚀 拡張の可能性
 
-### Phase 1: 基本機能の充実
-- [x] 基本的な文章執筆ワークフロー
-- [x] リサーチ機能の統合
-- [ ] 複数の設定テンプレート
-- [ ] 執筆履歴の管理
+このプロジェクトは、シンプルな対話型ワークフローを示すサンプルですが、様々な方向への拡張が可能です。
 
-### Phase 2: 高度な機能
-- [ ] MCPによる機能拡張
-- [ ] 外部校正ツールとの連携
-- [ ] RAGによる過去記事の参照
-- [ ] 自動投稿機能
+### 自己改善するワークフロー
+**Claude Codeの最大の強みは、ワークフロー自体を自分で修正・改善できることです。** 使用中に不便を感じたら、その場でClaudeに改善を依頼するだけで、コマンドファイルや設定を自動的に更新できます。例えば：
 
-### Phase 3: AI機能の強化
-- [ ] 執筆パターンの学習
-- [ ] 設定の自動最適化
-- [ ] 文体の一貫性チェック
-- [ ] SEO最適化支援
+- 「このステップは不要だから削除して」
+- 「文字数チェックをもっと詳細にして」
+- 「新しい文体設定を追加して」
+
+このような要望を伝えるだけで、Claudeがワークフローを進化させていきます。
+
+### 非同期・並列実行
+現在は対話型の実行方式ですが、要件をすべてファイルで定義することで、複数の記事を並列で生成することも可能になります。バッチ処理やCI/CDパイプラインへの組み込みなど、自動化の選択肢が広がります。
+
+### MCPによる機能拡張
+Model Context Protocol (MCP) を活用することで、必要な機能を柔軟に追加できます：
+
+- **コンテンツ生成**: 記事に合わせた画像の自動生成、図表の作成
+- **外部連携**: SNSへの自動投稿、CMSへの直接公開、Slackへの通知
+- **品質向上**: 外部校正ツールとの連携、SEO分析ツールの統合
+- **パーソナライズ**: 自分の過去記事をRAGで参照し文体を統一、独自の品質基準でのチェック
+
+### 高度なワークフロー
+- **マルチステップ執筆**: 企画→取材→執筆→編集の各フェーズを自動化
+- **コラボレーション**: 複数人でのレビュープロセスの組み込み
+- **バージョン管理**: 記事の改訂履歴の追跡、A/Bテストの実施
+
+このフレームワークをベースに、あなたのニーズに合わせた独自のワークフローを構築できます。可能性は無限大です！
 
 ## 🤝 貢献方法
 
@@ -203,7 +214,7 @@ quality_checks:
 ```
 MIT License
 
-Copyright (c) 2025 [Your Name]
+Copyright (c) 2025 Nobuo Ichiki
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -231,4 +242,4 @@ SOFTWARE.
 
 ---
 
-質問や提案がある場合は、[Issues](https://github.com/[your-username]/claude-writing-workflow/issues)でお知らせください。
+質問や提案がある場合は、[Issues](https://github.com/nichiki/claude-writing-workflow/issues)でお知らせください。
