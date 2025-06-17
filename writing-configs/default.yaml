@@ -1,0 +1,42 @@
+# デフォルトの文章執筆設定
+metadata:
+  config_name: "default"
+  description: "汎用的な文章執筆用の基本設定"
+
+# 文章の基本設定
+writing_style:
+  tone: "丁寧"  # カジュアル、丁寧、フォーマル、学術的
+  person: "です・ます調"  # です・ます調、だ・である調
+  word_count_range: [800, 1500]
+
+# ターゲット設定
+audience:
+  primary: "一般読者"
+  knowledge_level: "初級〜中級"
+  age_range: "20-50代"
+
+# 文章構成のテンプレート
+structure:
+  introduction:
+    purpose: "読者の興味を引き、記事の概要を示す"
+    length_ratio: 0.15  # 全体の15%
+  body:
+    purpose: "メイントピックを論理的に展開"
+    length_ratio: 0.7   # 全体の70%
+    sections: 3-5       # セクション数の目安
+  conclusion:
+    purpose: "要点をまとめ、読者に行動を促す"
+    length_ratio: 0.15  # 全体の15%
+
+# 品質チェック項目
+quality_checks:
+  - "論理的な流れがあるか"
+  - "読者にとって価値がある内容か"
+  - "専門用語の説明は適切か"
+  - "文章のリズムは良いか"
+
+# 制約事項
+constraints:
+  avoid_words: []  # 使用を避ける単語
+  required_elements: []  # 必須要素
+  max_sentence_length: 60  # 一文の最大文字数

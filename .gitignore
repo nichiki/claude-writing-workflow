@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# 執筆した記事（個人的なコンテンツ）
+articles/
+
+# エディタ
+.vscode/
+.idea/
+
+# その他
+*.log
+*.tmp
